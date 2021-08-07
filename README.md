@@ -52,7 +52,7 @@ Demo video:
 
 
 
-## Challenges and Areas for improvement
+## Future Development
 Using the fs module to store data in a JSON file was difficult to write asynchronously at first, and resulted in a small taste of 'callback hell'. An interesting improvement would be to try and implement node streaming, which while not neessary for a small and simple app like this one, could be vital for larger projects.
  
 
