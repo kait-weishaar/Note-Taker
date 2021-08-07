@@ -3,7 +3,7 @@
 
 
 ## Table of Contents
-* [Description] (#description)
+* [Description](#description)
 * [Technologies](#technologies)
 * [Deployment](#deployment)
 * [Usage](#usage)
@@ -24,9 +24,7 @@ The application was built with the express.js framework. It uses the npm UUID mo
 ## Usage
 The user can simply navigate to the deployed site and begin entering notes. For a video tutorial please [Click Here](https://drive.google.com/file/d/1rdXJMckBaGf7xklGCDxezoHB7Zlf7Fof/view)
 
-<figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/1Uwnqnm1ayApj4QQxuOSI2L-V-w4O5A7s/view?usp=sharing" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+<iframe src="https://drive.google.com/file/d/1pgKM5SxoFTlNmcdkeAflT8BaS3irxB2z/preview" width="640" height="480"></iframe>
 
 ## Built With
 Javascript
