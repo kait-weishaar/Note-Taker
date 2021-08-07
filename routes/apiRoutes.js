@@ -9,10 +9,10 @@ router.get("/api/notes", (req, res) => {
 router.post("/api/notes", (req, res) => {
     req.body.id = notes.length.toString();
     const newNote = req.body;
-    let notesData = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
-    notesData.push(newNote);
-    fs.writeFileSync('./db./db.json', JSON.stringify(notesData));
-    res.json(notesData);
+    // let notesData = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
+    notes.push(newNote);
+    // fs.writeFileSync('./db./db.json', JSON.stringify(notesData));
+    res.json(notes);
 })
 
 router.delete("/api/notes/:id", (req, res) => {
