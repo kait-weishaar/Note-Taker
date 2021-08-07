@@ -1,4 +1,4 @@
-const router = require("express").Router();
+const router = require('express').Router();
 const { notes } = require("../db/db.json");
 
 router.get("/notes", (req, res) => {
@@ -9,10 +9,10 @@ router.get("/notes", (req, res) => {
 router.post("/notes", (req, res) => {
     req.body.id = notes.length.toString();
     const newNote = req.body;
-    // let notesData = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
-    notes.push(newNote);
-    // fs.writeFileSync('./db./db.json', JSON.stringify(notesData));
-    res.json(notes);
+    let notesData = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
+    notesData.push(newNote);
+    fs.writeFileSync('./db./db.json', JSON.stringify(notesData));
+    res.json(notesData);
 })
 
 router.delete("/api/notes/:id", (req, res) => {
