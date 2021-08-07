@@ -1,12 +1,13 @@
 const router = require('express').Router();
-const { notes } = require("../db/db.json");
-
-router.get("/api/notes", (req, res) => {
+const  notes = require("../db/db.json");
+console.log("look here", notes);
+router.get("/notes", (req, res) => {
+    console.log("here we are");
     let results = notes;
     res.json(results);
 });
 
-router.post("/api/notes", (req, res) => {
+router.post("/notes", (req, res) => {
     req.body.id = notes.length.toString();
     const newNote = req.body;
     // let notesData = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
@@ -15,7 +16,7 @@ router.post("/api/notes", (req, res) => {
     res.json(notes);
 })
 
-router.delete("/api/notes/:id", (req, res) => {
+router.delete("/notes/:id", (req, res) => {
     let noteID = req.params.id.toString();
     let noteData = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
     const newData = noteData.filter(note => note.id.toString() !== noteID);
