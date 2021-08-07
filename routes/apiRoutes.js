@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const  notes = require("../db/db.json");
+
 const fs = require('fs')
-const path = require('path');
+
 const { v4: uuidv4 } = require('uuid');
 
 console.log("look here", uuidv4());
@@ -25,7 +25,7 @@ router.delete("/notes/:id", (req, res) => {
     let noteID = req.params.id.toString();
     let noteData = JSON.parse(
         fs.readFileSync( "./db/db.json", "utf8"));
-    // let noteData= JSON.parse(data)
+    
     console.log('we got halfway', noteData)
     const newData =noteData.filter(note => note.id.toString() !== noteID);
     console.log('we got halfway', newData)
