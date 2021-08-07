@@ -24,7 +24,11 @@ The application was built with the express.js framework. It uses the npm UUID mo
 ## Usage
 The user can simply navigate to the deployed site and begin entering notes. For a video tutorial please [Click Here](https://drive.google.com/file/d/1rdXJMckBaGf7xklGCDxezoHB7Zlf7Fof/view)
 
-<iframe src="https://drive.google.com/file/d/1pgKM5SxoFTlNmcdkeAflT8BaS3irxB2z/preview" width="640" height="480"></iframe>
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="path/to/poster_image.png">
+    <source src="/editedREADME.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Built With
 Javascript
