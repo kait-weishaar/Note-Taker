@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const { notes } = require("../db/db.json");
 
-router.get("/notes", (req, res) => {
+router.get("/api/notes", (req, res) => {
     let results = notes;
     res.json(results);
 });
 
-router.post("/notes", (req, res) => {
+router.post("/api/notes", (req, res) => {
     req.body.id = notes.length.toString();
     const newNote = req.body;
     let notesData = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
